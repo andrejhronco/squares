@@ -21,23 +21,23 @@ $(document).ready(function() {
 	
 	$("#answer_form").submit(function() {
 		// Putting a space after 'if' denotes it is a language operator, and not a function call.
-		if ($("input[name=answer]").val() == Math.sqrt(randNum) {
+		if ($("input[name=answer]").val() == Math.sqrt(randNum)) {
 			$('.square-root').text('correct!');
 			createBoxes();
 		} else {
-			$('.square-root').text('wrong!');	
+			$('.square-root').text('wrong!');
 		}
 		return false;
 	});
 	
 	
 	function createBoxes() {
-		// I encapsulated the call to createBoxes mostly because I wanted to capture the 
-		// Magic Numbers 1600 and 5 in a single place. 
-		$('#box').createBoxes(1600, 5);	
+		// I encapsulated the call to createBoxes mostly because I wanted to capture the
+		// Magic Numbers 1600 and 5 in a single place.
+		$('#box').createBoxes(1600, 5);
 	}
 
-	function askQuestion() {}
+	function askQuestion() {
 		// By naming functions well you replace comments (which get stale)
 		// with code that generally stays up to date. (After all, no one likes
 		// to call a function that doesn't do what it says it does, right?)
@@ -46,15 +46,15 @@ $(document).ready(function() {
 	}
 	
 	init();
-}
+
 });
 function randomFromTo(from, to, simple){
-	// I removed all DOM related activity from this function, as it is 
+	// I removed all DOM related activity from this function, as it is
 	// a pretty common pattern to seperate responsibilities of view
 	// and calculation logic.
 	var randNum;
 
-	if(simple === true){	
+	if(simple === true){
 		var simpleSet = [4,9,16,25,36,49,64,81,100,121,144,169,196,225];
 		randNum = simpleSet[Math.floor(Math.random()*simpleSet.length)];
 	}
